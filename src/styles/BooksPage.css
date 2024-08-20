@@ -1,0 +1,104 @@
+/* src/styles/BooksPage.css */
+.books-page {
+    text-align: center;
+    margin: 20px;
+    font-family: 'Arial', sans-serif;
+}
+
+.search-bar {
+    width: 50%;
+    padding: 15px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar:focus {
+    outline: none;
+    border-color: #666;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.books-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.book {
+    position: relative;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    background-color: white;
+    max-width: 280px;
+}
+
+.book:hover {
+    transform: translateY(-10px);
+}
+
+.book img {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.book img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.book h3 {
+    font-size: 1.4em;
+    margin: 15px 0;
+}
+
+.book p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.book button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color:#007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.book button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+@media (max-width: 1200px) {
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .books-grid {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+}
